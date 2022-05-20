@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    overflow: hidden;
+    height: 100vh;
+    animation: changeB 4s linear infinite;
+}
+i{
+    position: absolute;
+    height: 222px;
+    background: linear-gradient(transparent, white);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    animation: animate 4s linear infinite;
+}
+i:nth-child(3n+1){
+    background: linear-gradient(transparent, rgb(255, 17, 0));
+}
+i:nth-child(3n+2){
+    background: linear-gradient(transparent, rgb(0, 255, 106));
+}
+i:nth-child(3n+3){
+    background: linear-gradient(transparent, rgb(0, 119, 255));
+}
+@keyframes animate {
+    0%{
+        transform: translateY(-222px);
+    }
+    100%{
+        transform: translateY(calc(100vh + 222px));
+    }
+}
+@keyframes changeB {
+    to{
+    filter: hue-rotate(360deg);
+    }
+}

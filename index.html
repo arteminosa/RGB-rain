@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>It's RGB raining Cats and Dogs</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            function rain(){
+                let amt = 222;
+                let body = document.querySelector('body');
+                let i = 0;
+                while(i < amt){
+                    let drop = document.createElement('i');
+                    let sz = Math.random() * 4;
+                    let pX = Math.floor(Math.random() * window.innerWidth);
+                    let del = Math.random() * -20;
+                    let dur = Math.random() * 4;
+                    drop.style.width = 0.15 + sz + 'px';
+                    drop.style.left = pX + 'px';
+                    drop.style.animationDelay = del + 's';
+                    drop.style.animationDuration = 1 + dur + 's';
+                    body.appendChild(drop);
+                    i++
+                }
+            }
+            rain();
+        </script>
+    </body>
+</html>
